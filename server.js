@@ -10,14 +10,11 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "welcome to the app",
-  });
-});
-
+// connect to db
 // Listen for requests
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(` Server listening on port ${port}`);
 });
+
+// routes
