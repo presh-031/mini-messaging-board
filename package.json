@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/presh-031/mini-messaging-board.#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "mongoose": "^6.6.7",
     "morgan": "^1.10.0"
   }
 }
