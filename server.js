@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
+const indexRoutes = require("./routes/index");
+
 // register view engine
 app.set("view engine", "ejs");
 
@@ -18,3 +20,4 @@ app.listen(port, () => {
 });
 
 // routes
+app.use("/", indexRoutes);
