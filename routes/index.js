@@ -15,10 +15,13 @@ const messages = [
 ];
 
 // GET all messages
-app.get("/", (req, res) => {
-  res.status(200).render("index", {});
+router.get("/", (req, res) => {
+  res.status(200).render("index", { title: "Home", messages });
 });
 
 // POST a new message
-app.post("/new", (req, res) => {});
+router.post("/new", (req, res) => {
+  res.status(200).render("form", { title: "New Message" });
+});
+
 module.exports = router;
