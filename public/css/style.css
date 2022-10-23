@@ -98,4 +98,25 @@ main {
   main {
     margin-top: 4rem;
   }
+  .message {
+    padding: 2rem;
+  }
+  .message .user-info {
+    row-gap: 2rem;
+  }
+  .message .user-info p:first-child {
+    font-size: 2rem;
+  }
+  .message .user-info p:last-child {
+    font-size: 1.2rem;
+  }
+  .message .message-info {
+    row-gap: 2rem;
+  }
+  .message .message-info h2 {
+    font-size: 2rem;
+  }
+  .message .message-info p {
+    font-size: 1.2rem;
+  }
 }
