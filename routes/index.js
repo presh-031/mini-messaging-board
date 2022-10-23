@@ -19,9 +19,17 @@ router.get("/", (req, res) => {
   res.status(200).render("index", { title: "Home", messages });
 });
 
-// POST a new message
-router.post("/new", (req, res) => {
+// GET the form
+router.get("/new", (req, res) => {
   res.status(200).render("form", { title: "New Message" });
+});
+
+// POST a new message
+router.post("/new", (req, res) => {});
+
+// 404 page
+router.use((req, res) => {
+  res.status(404).render("404", { title: "404 not found" });
 });
 
 module.exports = router;
