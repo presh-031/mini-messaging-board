@@ -23,6 +23,7 @@ body {
 header {
   /* outline: 1px solid red; */
   text-align: center;
+  padding: 2rem 0;
 }
 header p:nth-child(1) {
   font-size: 2rem;
@@ -35,6 +36,7 @@ header p:nth-child(1) {
   border-radius: 10px;
   margin-top: 1rem;
   width: fit-content;
+  cursor: pointer;
 }
 
 .new-message a {
@@ -49,14 +51,28 @@ main {
 .message {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
   background-color: #333;
-  /* column-gap: 2rem; */
-  outline: 1px solid red;
+  border-top: 1px solid #888;
   padding: 1rem;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: transparent;
 }
 
 .message .user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
   width: 25%;
+}
+
+.message .user-info p:first-child {
+  color: green;
+  font-size: 1.2rem;
 }
 
 .message .message-info {
@@ -64,4 +80,22 @@ main {
   flex-direction: column;
   row-gap: 1rem;
   width: 75%;
+}
+
+@media (min-width: 425px) {
+  header {
+    text-align: left;
+  }
+  header p:nth-child(1) {
+    font-size: 3rem;
+  }
+  header p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  .new-message {
+    font-size: 2rem;
+  }
+  main {
+    margin-top: 4rem;
+  }
 }

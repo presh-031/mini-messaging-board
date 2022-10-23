@@ -6,13 +6,13 @@ const messages = [
     title: "Hello",
     text: "Hi there!, kindly work",
     user: "Amando",
-    date: new Date(),
+    date: new Date().toLocaleDateString(),
   },
   {
     title: "Hello",
     text: "Hello World!, does this work?",
     user: "Charles",
-    date: new Date(),
+    date: new Date().toLocaleDateString(),
   },
 ];
 
@@ -32,10 +32,10 @@ router.post("/new", (req, res) => {
   const { title, text, user } = req.body;
 
   const newPost = {
-    title: title,
-    text: text,
-    user: user,
-    date: new Date(),
+    title,
+    text,
+    user,
+    date: new Date().toLocaleDateString(),
   };
 
   messages.unshift(newPost);
