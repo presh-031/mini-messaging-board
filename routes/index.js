@@ -6,13 +6,13 @@ const messages = [
     title: "Hello",
     text: "Hi there!",
     user: "Amando",
-    added: new Date(),
+    date: new Date(),
   },
   {
     title: "Hello",
     text: "Hello World!",
     user: "Charles",
-    added: new Date(),
+    date: new Date(),
   },
 ];
 
@@ -27,7 +27,23 @@ router.get("/new", (req, res) => {
 });
 
 // POST a new message
-router.post("/new", (req, res) => {});
+router.post("/new", (req, res) => {
+  console.log(req.body);
+  const { title, text, user } = req.body;
+
+  const newPost = {
+    title,
+    text,
+    user,
+    date: new Date(),
+  };
+
+  messages.unshift(newPost);
+
+  res.status(200).redirect("/");
+
+  console.log(messages);
+});
 
 // 404 page
 router.use((req, res) => {

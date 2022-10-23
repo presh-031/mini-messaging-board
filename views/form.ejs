@@ -4,6 +4,18 @@
   <body>
     <%- include('./partials/header.ejs') %>
 
-    <form action="/new" method="post"></form>
+    <form action="/new" method="POST">
+      <label for="user"></label>
+      <input type="text" id="user" placeholder="Username" required />
+
+      <label for="title"></label>
+      <input type="text" id="title" placeholder="Title of Message" required />
+
+      <label for="text"></label>
+      <textarea id="text" placeholder="Pineapples belong on pizza, I think" required></textarea>
+
+      <button>Submit Message</button>
+      <a href="/">Go Back</a>
+    </form>
   </body>
 </html>
