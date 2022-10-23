@@ -52,6 +52,7 @@ form textarea {
   border: none;
   padding: 1rem;
   width: 100%;
+  background-color: #ccc;
 }
 
 form > div {
@@ -69,6 +70,11 @@ form > div button {
   margin-top: 1rem;
   cursor: pointer;
   color: #fff;
+  transition: background-color 0.15s ease-in-out;
+}
+
+form > div button:hover {
+  background-color: rgb(40, 128, 90);
 }
 
 form > div div {
@@ -80,6 +86,10 @@ form > div div {
   margin-top: 1rem;
   cursor: pointer;
   color: #fff;
+  transition: background-color 0.15s ease-in-out;
+}
+form > div div:hover {
+  background-color: rgb(173, 67, 67);
 }
 
 form > div div a {
@@ -111,4 +121,19 @@ footer a {
 }
 .fa-github:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+@media (min-width: 425px) {
+  header {
+    text-align: left;
+  }
+  header p:nth-child(1) {
+    font-size: 3rem;
+  }
+  header p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  form {
+    max-width: 800px;
+  }
 }
