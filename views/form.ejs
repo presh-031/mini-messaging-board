@@ -6,15 +6,15 @@
 
     <form action="/new" method="POST">
       <label for="user"></label>
-      <input type="text" id="user" placeholder="Username" required />
+      <input type="text" id="user" name="user" placeholder="Username" required />
 
       <label for="title"></label>
-      <input type="text" id="title" placeholder="Title of Message" required />
+      <input type="text" id="title" name="title" placeholder="Title of Message" required />
 
       <label for="text"></label>
-      <textarea id="text" placeholder="Pineapples belong on pizza, I think" required></textarea>
+      <textarea id="text" name="text" placeholder="Pineapples belong on pizza, I think" required></textarea>
 
-      <button>Submit Message</button>
+      <button type="submit">Submit Message</button>
       <a href="/">Go Back</a>
     </form>
   </body>

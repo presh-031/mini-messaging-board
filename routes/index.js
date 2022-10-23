@@ -4,13 +4,13 @@ const router = express.Router();
 const messages = [
   {
     title: "Hello",
-    text: "Hi there!",
+    text: "Hi there!, kindly work",
     user: "Amando",
     date: new Date(),
   },
   {
     title: "Hello",
-    text: "Hello World!",
+    text: "Hello World!, does this work?",
     user: "Charles",
     date: new Date(),
   },
@@ -32,9 +32,9 @@ router.post("/new", (req, res) => {
   const { title, text, user } = req.body;
 
   const newPost = {
-    title,
-    text,
-    user,
+    title: title,
+    text: text,
+    user: user,
     date: new Date(),
   };
 
@@ -42,7 +42,7 @@ router.post("/new", (req, res) => {
 
   res.status(200).redirect("/");
 
-  console.log(messages);
+  // console.log(messages);
 });
 
 // 404 page

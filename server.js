@@ -8,7 +8,7 @@ const indexRoutes = require("./routes/index");
 app.set("view engine", "ejs");
 
 // middleware & static files
-app.use(express.json());
+app.use(express.urlencoded());
 app.use(morgan("dev"));
 app.use(express.static("public"));
 
